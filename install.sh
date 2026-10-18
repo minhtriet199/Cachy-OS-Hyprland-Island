@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install Isla (Quickshell desktop shell) for the current user. No sudo needed except for packages.
+# Install Island (Quickshell desktop shell) for the current user. No sudo needed except for packages.
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
 echo "Packages needed (Arch / CachyOS):"
