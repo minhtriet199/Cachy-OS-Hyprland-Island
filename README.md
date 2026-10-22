@@ -59,7 +59,19 @@ Your lock wallpaper, the date and a big sticker clock. Press any key…
 <td width="50%" valign="top">
 <img src="assets/lock-phone.jpg" alt="Lock screen phone sliding up with password field" width="100%">
 <br><b>…and the phone slides up</b><br>
-Avatar, "Locked since", password dots, Unlock, the song that is playing, Restart / Shut down. The background blurs. The same screen is used as the <b>login screen</b> (isla-greeter).
+Avatar, "Locked since", password dots, Unlock, the song that is playing, Restart / Shut down. The background blurs.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<img src="assets/login-rest.jpg" alt="Login screen: date, big clock, press any key to log in" width="100%">
+<br><b>Login screen (isla-greeter)</b><br>
+The same design greets you at boot: greetd runs a small Hyprland with Isla's lock screen as the login. "Press any key to log in"…
+</td>
+<td width="50%" valign="top">
+<img src="assets/login-phone.jpg" alt="Login phone with Welcome back and Log in button" width="100%">
+<br><b>…Welcome back</b><br>
+"Welcome back", a user picker when there is more than one user, Log in, Restart / Shut down. After login the phone is pulled down and an iris in the wallpaper colour opens your desktop, with no black flash in between.
 </td>
 </tr>
 </table>
