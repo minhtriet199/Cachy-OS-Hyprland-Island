@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Isla</h1>
+<h1>Island</h1>
 
 <b>A cozy, sticker-style desktop shell for Hyprland, built with Quickshell.</b><br>
 The control center is a 3D phone, the bar is made of candy pills, and the lock screen and login screen share one design.
@@ -13,14 +13,14 @@ The control center is a 3D phone, the bar is made of candy pills, and the lock s
 
 <div align="left">
 
-> ⚠️ **This is a personal project.** Isla is made for my own laptop (ASUS ROG Zephyrus G14 on CachyOS, an external
+> ⚠️ **This is a personal project.** Island is made for my own laptop (ASUS ROG Zephyrus G14 on CachyOS, an external
 > 1440p HDR screen + the laptop screen). It works for me every day, but expect rough edges on other machines.
 
 </div>
 
 <br>
 
-<img src="assets/desktop.jpg" alt="Isla desktop: candy pill bar on top, big sticker clock on the right" width="100%">
+<img src="assets/desktop.jpg" alt="Island desktop: candy pill bar on top, big sticker clock on the right" width="100%">
 
 <sub>The desktop: bar with workspaces, weather, music, clock, system stats, tray, quick toggles and battery. The big sticker clock sits on the wallpaper.</sub>
 
@@ -31,7 +31,7 @@ The control center is a 3D phone, the bar is made of candy pills, and the lock s
 <h2 id="showcase">✿ Showcase</h2>
 
 <div align="center">
-<img src="assets/phone-strip.jpg" alt="The Isla phone: search, quick panel, calculator, profile and islands pages" width="100%">
+<img src="assets/phone-strip.jpg" alt="The Island phone: search, quick panel, calculator, profile and islands pages" width="100%">
 <sub>The phone (<kbd>Super</kbd> + <kbd>Space</kbd>): search · quick panel · calculator · profile · islands (workspaces)</sub>
 </div>
 
@@ -65,8 +65,8 @@ Avatar, "Locked since", password dots, Unlock, the song that is playing, Restart
 <tr>
 <td width="50%" valign="top">
 <img src="assets/login-rest.jpg" alt="Login screen: date, big clock, press any key to log in" width="100%">
-<br><b>Login screen (isla-greeter)</b><br>
-The same design greets you at boot: greetd runs a small Hyprland with Isla's lock screen as the login. "Press any key to log in"…
+<br><b>Login screen (island-greeter)</b><br>
+The same design greets you at boot: greetd runs a small Hyprland with Island's lock screen as the login. "Press any key to log in"…
 </td>
 <td width="50%" valign="top">
 <img src="assets/login-phone.jpg" alt="Login phone with Welcome back and Log in button" width="100%">
@@ -104,7 +104,7 @@ notifications with Quiet mode, an EN / VI input switch, Wi-Fi / Bluetooth / soun
 
 <table>
 <tr>
-<td width="20%" valign="top" align="center"><img src="assets/phone-search.jpg" alt="Search" width="100%"><br><b>Search</b><br><sub>Apps, Isla pages, files, text inside files, maths and Google. Tabs: All / Apps / Files / Content.</sub></td>
+<td width="20%" valign="top" align="center"><img src="assets/phone-search.jpg" alt="Search" width="100%"><br><b>Search</b><br><sub>Apps, Island pages, files, text inside files, maths and Google. Tabs: All / Apps / Files / Content.</sub></td>
 <td width="20%" valign="top" align="center"><img src="assets/phone-quick.jpg" alt="Quick panel" width="100%"><br><b>Quick panel</b><br><sub>Wi-Fi, Bluetooth, mic, speaker, Cloudflare WARP, Easy Effects, gamma, brightness, record button and notifications.</sub></td>
 <td width="20%" valign="top" align="center"><img src="assets/phone-calc.jpg" alt="Calculator" width="100%"><br><b>Calculator</b><br><sub>Brackets, history, <code>2(3)</code> = 2×3, "= again" repeats the last step, ÷ 0 → ERROR.</sub></td>
 <td width="20%" valign="top" align="center"><img src="assets/phone-profile.jpg" alt="Profile" width="100%"><br><b>Profile</b><br><sub>Uptime, shell, desktop, today's screen time, avatar, phone background, name and password.</sub></td>
@@ -125,13 +125,13 @@ notifications with Quiet mode, an EN / VI input switch, Wi-Fi / Bluetooth / soun
 | **Dock** | Auto-hide dock with live window previews and running dots |
 | **Notifications** | Up to 3 bubbles with a queue, history in the bell card, Do not disturb, quiet while gaming |
 | **Snip editor** | <kbd>Super</kbd> + <kbd>S</kbd> / <kbd>Print</kbd>: freeze the screens, pick an area, draw, crop, resize. Enter = save + copy, Esc = copy only |
-| **Record** | Record button drives OBS (through obs-websocket) with Isla's own screen picker, also used by Discord and browsers |
+| **Record** | Record button drives OBS (through obs-websocket) with Island's own screen picker, also used by Discord and browsers |
 | **Clipboard** | History with pins and auto-clean after N days |
 | **Lock + login** | One `LockScreen.qml` for both. Circle "iris" transition with an icon; the colour can follow the wallpaper |
-| **Pop-ups** | Polkit password, keyring password and Bluetooth pairing dialogs, all in Isla's style |
+| **Pop-ups** | Polkit password, keyring password and Bluetooth pairing dialogs, all in Island's style |
 | **Game mode** | Animations off, phone light mode, visualizer paused, slower polling |
 | **Find my mouse** | Double-tap <kbd>Ctrl</kbd>: rings around the cursor |
-| **Apps look** | Kvantum "Isla" theme, Isla KDE colours, qt6ct colours, GTK CSS and an Isla folder icon set, so apps match |
+| **Apps look** | Kvantum "Island" theme, Island KDE colours, qt6ct colours, GTK CSS and an Island folder icon set, so apps match |
 
 ---
 
@@ -152,7 +152,7 @@ notifications with Quiet mode, an EN / VI input switch, Wi-Fi / Bluetooth / soun
 </tr>
 <tr>
 <td valign="top"><img src="assets/settings-windows.jpg" alt="Windows look" width="100%"><br><b>Windows</b>: see-through for focused / other windows, borders and colours, corner radius, gaps.</td>
-<td valign="top"><img src="assets/settings-system.jpg" alt="System" width="100%"><br><b>System</b>: battery charge limit, firewall, SSH server, file sharing, "about this PC", reload Isla, storage and a manual update check.</td>
+<td valign="top"><img src="assets/settings-system.jpg" alt="System" width="100%"><br><b>System</b>: battery charge limit, firewall, SSH server, file sharing, "about this PC", reload Island, storage and a manual update check.</td>
 </tr>
 <tr>
 <td valign="top"><img src="assets/settings-mouse.jpg" alt="Mouse and touchpad" width="100%"><br><b>Mouse & touchpad</b>: pointer speed, acceleration, tap to click, natural scrolling, disable while typing.</td>
@@ -174,9 +174,9 @@ Also: **Wi-Fi** (networks, passwords, per-network DNS / IP), **Bluetooth** (pair
 | Need | Notes |
 |---|---|
 | **Arch-based distro** | Made and tested on CachyOS |
-| **Hyprland 0.56+** with the **Lua** config | Isla talks to Hyprland with `hyprctl dispatch 'hl.dsp…'` (Lua dispatchers) |
-| **Quickshell** 0.3+ | Started as `qs -c isla` |
-| **Python 3** | Small helpers in `isla/tools/` (no extra modules needed, except `dbus-python` for the keyring prompter) |
+| **Hyprland 0.56+** with the **Lua** config | Island talks to Hyprland with `hyprctl dispatch 'hl.dsp…'` (Lua dispatchers) |
+| **Quickshell** 0.3+ | Started as `qs -c island` |
+| **Python 3** | Small helpers in `island/tools/` (no extra modules needed, except `dbus-python` for the keyring prompter) |
 
 <details>
 <summary><b>Packages</b></summary>
@@ -200,7 +200,7 @@ Also: **Wi-Fi** (networks, passwords, per-network DNS / IP), **Bluetooth** (pair
 <summary><b>Fonts</b></summary>
 <br>
 
-Fredoka, Nunito and Titan One are inside `isla/fonts/` (SIL Open Font License). Isla loads them by itself; you don't install anything.
+Fredoka, Nunito and Titan One are inside `island/fonts/` (SIL Open Font License). Island loads them by itself; you don't install anything.
 
 </details>
 
@@ -219,50 +219,50 @@ cd Cachy-OS-Hyprland-Island
 `install.sh` does not use `sudo`. It:
 
 1. prints the `pacman` command for the packages (run it yourself),
-2. copies the shell to `~/.config/quickshell/isla` (an old copy is kept as `isla.bak-<time>`),
-3. copies the extras: Kvantum theme, Isla icon set, KDE + qt6ct colours and the default wallpaper.
+2. copies the shell to `~/.config/quickshell/island` (an old copy is kept as `island.bak-<time>`),
+3. copies the extras: Kvantum theme, Island icon set, KDE + qt6ct colours and the default wallpaper.
 
 ```
-isla/      the shell (QML) + tools/ (Python / shell helpers)
+island/      the shell (QML) + tools/ (Python / shell helpers)
 extras/    kvantum, icons, color-schemes, qt6ct, wallpapers
 ```
 
 ### 2. Start it
 
 ```bash
-qs -c isla
+qs -c island
 ```
 
 To start it with Hyprland, add this to your Lua config:
 
 ```lua
-hl.on("hyprland.start", function () hl.exec_cmd("env MALLOC_ARENA_MAX=2 qs -c isla") end)
+hl.on("hyprland.start", function () hl.exec_cmd("env MALLOC_ARENA_MAX=2 qs -c island") end)
 ```
 
-(`MALLOC_ARENA_MAX=2` keeps Isla at about 470 MB instead of about 850 MB.)
+(`MALLOC_ARENA_MAX=2` keeps Island at about 470 MB instead of about 850 MB.)
 
 ### 3. The full desktop (optional)
 
 Some settings pages drive scripts from my Hyprland dotfiles: displays (`screenctl.py`), keyboard shortcuts
 (`keybinds.py`), window look (`lookctl.py`), mouse (`inputctl.py`) and the snip tool (`snip.sh`). They are in
 **[cachy_hyprland_dotfile](https://github.com/minhtriet199/cachy_hyprland_dotfile)** together with the Hyprland config,
-the keybinds below and the **isla-greeter** login screen. Without them those pages show what they can and skip the rest.
+the keybinds below and the **island-greeter** login screen. Without them those pages show what they can and skip the rest.
 
 ### Updating
 
-`git pull` and run `./install.sh` again. Your settings live in `~/.local/state/isla/prefs.json`, so they are kept.
+`git pull` and run `./install.sh` again. Your settings live in `~/.local/state/island/prefs.json`, so they are kept.
 
 ### Talk to it from a terminal
 
 ```bash
-qs -c isla ipc call isla phone home        # open a page: home quick islands profile calc settings wallpapers settingsDisplays …
-qs -c isla ipc call isla close             # close the phone
-qs -c isla ipc call isla drop calendar     # open a bar card: calendar music sys sound battery palette notifs weather wifi bt
-qs -c isla ipc call isla rotate            # turn the phone
-qs -c isla ipc call isla phonemode         # phone as overlay ↔ window
-qs -c isla ipc call isla lock              # lock (locktest = 30 s test that unlocks by itself)
-qs -c isla ipc call isla palette random    # palette: wallpaper | music | random | shuffle | apply | undo
-qs -c isla ipc call isla gamemode          # game mode on / off
+qs -c island ipc call island phone home        # open a page: home quick islands profile calc settings wallpapers settingsDisplays …
+qs -c island ipc call island close             # close the phone
+qs -c island ipc call island drop calendar     # open a bar card: calendar music sys sound battery palette notifs weather wifi bt
+qs -c island ipc call island rotate            # turn the phone
+qs -c island ipc call island phonemode         # phone as overlay ↔ window
+qs -c island ipc call island lock              # lock (locktest = 30 s test that unlocks by itself)
+qs -c island ipc call island palette random    # palette: wallpaper | music | random | shuffle | apply | undo
+qs -c island ipc call island gamemode          # game mode on / off
 ```
 
 ---
@@ -304,10 +304,10 @@ Inside the phone: <kbd>Ctrl</kbd> + <kbd>S</kbd> turn · <kbd>Ctrl</kbd> + <kbd>
 
 | Problem | Try |
 |---|---|
-| Isla doesn't start / a page is empty | `qs -c isla log` shows the error. Parts like the phone and the snip editor only load when opened, so open them once after a change |
+| Island doesn't start / a page is empty | `qs -c island log` shows the error. Parts like the phone and the snip editor only load when opened, so open them once after a change |
 | Two bars, or "Not ready" | Two copies are running: `pgrep -ax qs`, kill the newer one |
-| Memory keeps growing after edits | Hot reload leaks. Restart fresh: `qs -c isla kill; sleep 1; hyprctl eval 'hl.exec_cmd("env MALLOC_ARENA_MAX=2 qs -c isla")'` |
-| Changes to `prefs.json` don't show | Isla doesn't watch the file. Change it from the phone, or restart Isla |
+| Memory keeps growing after edits | Hot reload leaks. Restart fresh: `qs -c island kill; sleep 1; hyprctl eval 'hl.exec_cmd("env MALLOC_ARENA_MAX=2 qs -c island")'` |
+| Changes to `prefs.json` don't show | Island doesn't watch the file. Change it from the phone, or restart Island |
 | Keybinds don't work | `hyprctl configerrors`. Hyprland 0.56+ with the Lua config is needed |
 | Screen share / record picker never opens | `systemctl --user restart xdg-desktop-portal-hyprland xdg-desktop-portal`, then restart OBS |
 
@@ -315,9 +315,9 @@ Inside the phone: <kbd>Ctrl</kbd> + <kbd>S</kbd> turn · <kbd>Ctrl</kbd> + <kbd>
 
 <h2 id="credits">✿ Credits</h2>
 
-- **[Quickshell](https://quickshell.org)** and **[Hyprland](https://hyprland.org)**, which Isla runs on.
+- **[Quickshell](https://quickshell.org)** and **[Hyprland](https://hyprland.org)**, which Island runs on.
 - **[SekaiPop](https://github.com/Blapples/SekaiPop)** by Blapples: the inspiration for the card style (dense, tilted, sticker shadows, dark tiles mixed with light) and for this README.
-- *Animal Crossing: New Horizons*: the inspiration for the phone, the island theme and the iris transition. Isla is a fan-made look, not affiliated with Nintendo.
+- *Animal Crossing: New Horizons*: the inspiration for the phone, the island theme and the iris transition. Island is a fan-made look, not affiliated with Nintendo.
 - Fonts: Fredoka, Nunito, Titan One (SIL Open Font License).
 - Weather from [wttr.in](https://wttr.in).
 - Wallpapers shown in the screenshots belong to their original artists.

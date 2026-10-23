@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Copy the live Island shell + its theme files into this repo, commit, push.
+# Usage: island-sync "short message describing what changed"
+set -uo pipefail
+REPO="$(cd "$(dirname "$0")" && pwd)"; MSG="${1:-update Island}"; cd "$REPO" || exit 1
+rsync -a --delete --exclude='*.bak*' --exclude='__pycache__/' "$HOME/.config/quickshell/island/" "island/"
+mkdir -p extras/kvantum extras/icons extras/color-schemes extras/qt6ct extras/wallpapers
+rsync -a --delete --exclude='*.bak*' "$HOME/.config/Kvantum/Island/" "extras/kvantum/Island/"
+rsync -a --delete "$HOME/.local/share/icons/Island/" "extras/icons/Island/"
+cp -a "$HOME/.local/share/color-schemes/Island.colors" extras/color-schemes/ 2>/dev/null
+cp -a "$HOME/.config/qt6ct/colors/island.conf" extras/qt6ct/ 2>/dev/null
+cp -a "$HOME/Pictures/Wallpapers/island-default.png" extras/wallpapers/ 2>/dev/null
+# safety: never publish a broken main file
+[ "$(wc -c < island/shell.qml)" -gt 10000 ] || { echo "island/shell.qml looks broken — not syncing"; exit 1; }
+git add -A
+git diff --cached --quiet && { echo "Nothing changed."; exit 0; }
+git commit -qm "$MSG" && { git push -q -u origin main 2>/dev/null && echo "Pushed: $MSG" || echo "Committed locally, push failed"; }
