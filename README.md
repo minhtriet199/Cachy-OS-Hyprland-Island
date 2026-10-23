@@ -316,7 +316,6 @@ Inside the phone: <kbd>Ctrl</kbd> + <kbd>S</kbd> turn · <kbd>Ctrl</kbd> + <kbd>
 <h2 id="credits">✿ Credits</h2>
 
 - **[Quickshell](https://quickshell.org)** and **[Hyprland](https://hyprland.org)**, which Island runs on.
-- **[SekaiPop](https://github.com/Blapples/SekaiPop)** by Blapples: the inspiration for the card style (dense, tilted, sticker shadows, dark tiles mixed with light) and for this README.
 - *Animal Crossing: New Horizons*: the inspiration for the phone, the island theme and the iris transition. Island is a fan-made look, not affiliated with Nintendo.
 - Fonts: Fredoka, Nunito, Titan One (SIL Open Font License).
 - Weather from [wttr.in](https://wttr.in).
