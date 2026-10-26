@@ -2,13 +2,16 @@ import QtQuick
 import Quickshell
 import Quickshell.Io
 
-// System dropdown (bar CPU/RAM/GPU pill): live graphs for CPU, RAM and GPU, temperatures, VRAM, the 4 apps using the most
+// System dropdown (bar CPU/RAM/GPU pill): power use, live graphs for CPU, RAM and both GPUs, temperatures, VRAM, the 4 apps using the most
 // right now, fans, btop button.
 DropCard {
     id: d
     property var svc
     readonly property var m: svc.sysmon
-    width: 360; height: 84 + 14 + 3 * 92 + 12 + 18 + 4 * 30 + 40 + 16 + 36 + 16
+    width: 360; height: 84 + 14 + 4 * 92 + 12 + 18 + 4 * 30 + 40 + 16 + 36 + 16
+    // power: on battery the battery's drain (= the whole laptop); plugged in only the chips report it (CPU + 680M share one sensor)
+    readonly property string powerLine: "⚡ " + (m.onBattery && m.batW > 0 ? Math.round(m.batW) + " W from battery" : "chips " + Math.round(m.apuW + m.gpuW) + " W")
+        + "  ·  CPU+" + d.svc.igpuName + " " + Math.round(m.apuW) + "  ·  " + d.svc.gpuName + " " + (m.gpuAsleep ? "asleep" : Math.round(m.gpuW))
 
     // top apps: every process's CPU ticks + memory from /proc (one cat, only while this dropdown is open, every 2 s),
     // grouped by program name; CPU = share of the whole machine since the last look, RAM = resident memory
@@ -42,7 +45,8 @@ DropCard {
         Glyph { anchors.centerIn: parent; name: "pulse"; size: 23; stroke: 2.4 } }
     Column { x: 78; y: 21
         UiText { text: "System"; px: 22; w: 700; height: 26 }
-        UiText { text: "CPU " + d.m.cpuTemp + "°C · GPU " + d.m.gpuTemp + "°C"; fam: "n"; px: 11; w: 800; color: Theme.textMuted } }
+        UiText { text: "CPU " + d.m.cpuTemp + "°C · GPU " + d.m.gpuTemp + "°C"; fam: "n"; px: 11; w: 800; color: Theme.textMuted }
+        UiText { visible: d.m.ok; text: d.powerLine; fam: "n"; px: 11; w: 900; color: Theme.textDeep } }
 
     Column {
         x: 16; y: 84 + 14; width: d.width - 32; spacing: 12
@@ -50,7 +54,8 @@ DropCard {
             model: [
                 ["CPU", d.m.cpu + "%", d.m.cpuTemp + "°C · 16 threads", d.svc.cpuHist, Theme.sea],
                 ["RAM", d.m.ramUsed.toFixed(1) + " GB", d.m.ram + "% of " + d.m.ramTotal.toFixed(1) + " GB", d.svc.ramHist, Theme.purple],
-                ["GPU · " + d.svc.gpuName, d.m.gpu + "%", d.m.gpuTemp + "°C · VRAM " + d.m.vramUsed.toFixed(1) + " / " + d.m.vramTotal.toFixed(0) + " GB", d.svc.gpuHist, Theme.berry]
+                ["GPU · " + d.svc.igpuName, d.m.igpu + "%", d.m.igpuTemp + "°C · VRAM " + d.m.igpuVram.toFixed(1) + " / " + d.m.igpuVramTotal.toFixed(1) + " + " + d.m.igpuShared.toFixed(1) + " GB shared", d.svc.igpuHist, Theme.leaf],
+                ["GPU · " + d.svc.gpuName, d.m.gpuAsleep ? "asleep" : d.m.gpu + "%", d.m.gpuAsleep ? "sleeping (saves battery)" : d.m.gpuTemp + "°C · VRAM " + d.m.vramUsed.toFixed(1) + " / " + d.m.vramTotal.toFixed(0) + " GB · " + Math.round(d.m.gpuW) + " W", d.svc.gpuHist, Theme.berry]
             ]
             delegate: Column {
                 id: sec
