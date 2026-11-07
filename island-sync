@@ -3,7 +3,7 @@
 # Usage: island-sync "short message describing what changed"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")" && pwd)"; MSG="${1:-update Island}"; cd "$REPO" || exit 1
-rsync -a --delete --exclude='*.bak*' --exclude='__pycache__/' "$HOME/.config/quickshell/island/" "island/"
+rsync -a --delete --exclude='*.bak*' --exclude='*.save' --exclude='__pycache__/' --exclude='.git' "$HOME/.config/quickshell/island/" "island/"   # .git = Island's own local history
 mkdir -p extras/kvantum extras/icons extras/color-schemes extras/qt6ct extras/wallpapers
 rsync -a --delete --exclude='*.bak*' "$HOME/.config/Kvantum/Island/" "extras/kvantum/Island/"
 rsync -a --delete "$HOME/.local/share/icons/Island/" "extras/icons/Island/"
